@@ -1,57 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Nacho Martínez – Game Designer</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nacho Martínez – Game Systems Designer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+
+  <div class="progress-bar"></div>
 
   <section class="hero">
     <h1>Nacho Martínez</h1>
-    <h2>Game Designer & Developer</h2>
-    <p>Diseño experiencias interactivas, mecánicas y sistemas para videojuegos.</p>
+    <h2>Game Systems Designer</h2>
+    <p>Diseño sistemas, balance y experiencias interactivas.</p>
+    <a href="#about" class="btn">Explorar</a>
   </section>
 
-  <section>
+  <section id="about" class="fade-section">
     <h3>Sobre mí</h3>
     <p>
-      Soy desarrollador y diseñador de videojuegos enfocado en sistemas,
-      balance y experiencia del jugador. Trabajo con Unity y desarrollo
-      proyectos propios como Echo Dash.
+      Soy diseñador y desarrollador de videojuegos enfocado en diseño de sistemas,
+      balance y experiencia del jugador. Trabajo con Unity y desarrollo proyectos propios.
     </p>
   </section>
 
-  <section>
+  <section class="fade-section">
     <h3>Proyectos</h3>
 
-    <div class="project">
+    <div class="card">
       <h4>Echo Dash</h4>
-      <p>Infinity Runner cooperativo 3D con estética glitch futurista.</p>
+      <p>Infinity Runner cooperativo 3D con sistema de dificultad escalable.</p>
     </div>
 
-    <div class="project">
+    <div class="card">
       <h4>One Button Bosses</h4>
-      <p>Juego de acción minimalista centrado en diseño de jefes.</p>
+      <p>Juego minimalista centrado en diseño de jefes y lectura del jugador.</p>
     </div>
 
   </section>
 
-  <section>
+  <section class="fade-section">
     <h3>Skills</h3>
     <ul>
+      <li>Game Systems Design</li>
+      <li>Balance & Difficulty Tuning</li>
       <li>Unity 3D</li>
-      <li>Game Design</li>
-      <li>Level Design</li>
       <li>C#</li>
       <li>Firebase</li>
     </ul>
   </section>
 
-  <section>
+  <section class="fade-section contact">
     <h3>Contacto</h3>
     <p>Email: tumail@example.com</p>
   </section>
 
+  <script src="script.js"></script>
 </body>
 </html>
