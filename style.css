@@ -115,3 +115,49 @@ ul li::before {
   width: 0%;
   z-index: 1000;
 }
+
+/* INSIGHT SYSTEM */
+
+.insight-counter {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #94a3b8;
+  z-index: 1001;
+}
+
+.insight-popup {
+  position: fixed;
+  top: 60px;
+  right: 30px;
+  font-size: 13px;
+  color: #38bdf8;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+  z-index: 1001;
+}
+
+.insight-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.final-message {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e293b;
+  padding: 15px 25px;
+  border-radius: 6px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.final-message.show {
+  opacity: 1;
+}
