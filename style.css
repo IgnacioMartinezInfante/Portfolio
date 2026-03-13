@@ -66,20 +66,22 @@ header p {
 
 .project-video {
   position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 6px;
   cursor: pointer;
 }
 
-.project-video img {
-  width: 100%;
-  border-radius: 6px;
-}
-
+.project-video img,
 .project-video iframe {
   width: 100%;
-  height: 400px;
+  height: 100%;
+  object-fit: cover;
   border: none;
-  border-radius: 6px;
 }
+
+/* botón play */
 
 .play-button {
   position: absolute;
@@ -91,6 +93,17 @@ header p {
   padding: 10px 18px;
   border-radius: 8px;
   color: white;
+  pointer-events: none;
+}
+
+/* pequeño efecto cuando pasás el mouse */
+
+.project-video img {
+  transition: transform 0.3s;
+}
+
+.project-video:hover img {
+  transform: scale(1.05);
 }
 
 footer {
