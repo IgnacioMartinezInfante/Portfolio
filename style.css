@@ -68,7 +68,7 @@ header p {
 .project-video {
   position: relative;
   width: 100%;
-  height: 400px;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 6px;
   cursor: pointer;
