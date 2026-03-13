@@ -36,11 +36,12 @@ header p {
   padding: 20px;
   margin-bottom: 40px;
   border-radius: 10px;
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .project:hover {
   transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
 .project h2 {
@@ -73,20 +74,22 @@ header p {
   cursor: pointer;
 }
 
+/* imagen */
+
 .project-video img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s;
+  transition: transform 0.35s ease;
 }
 
-/* zoom suave */
+/* zoom al pasar mouse */
 
 .project-video:hover img {
   transform: scale(1.05);
 }
 
-/* overlay */
+/* overlay oscuro */
 
 .video-overlay {
   position: absolute;
@@ -94,29 +97,36 @@ header p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.35);
   opacity: 0;
-  transition: opacity 0.25s;
+  transition: opacity 0.25s ease;
 }
 
 .project-video:hover .video-overlay {
   opacity: 1;
 }
 
-/* botón */
+/* botón play */
 
 .play-button {
-  font-size: 50px;
+  font-size: 46px;
   color: white;
   background: #ff0000;
-  padding: 12px 18px;
+  padding: 14px 20px;
   border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
 }
 
-/* iframe */
+/* iframe video */
 
 .project-video iframe {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #94a3b8;
 }
