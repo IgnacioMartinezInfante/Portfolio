@@ -36,13 +36,11 @@ header p {
   padding: 20px;
   margin-bottom: 40px;
   border-radius: 10px;
+  transition: transform 0.2s;
 }
 
-.project iframe {
-  width: 100%;
-  height: 400px;
-  border: none;
-  border-radius: 6px;
+.project:hover {
+  transform: translateY(-4px);
 }
 
 .project h2 {
@@ -62,6 +60,37 @@ header p {
   text-decoration: none;
   border-radius: 5px;
   font-size: 14px;
+}
+
+/* VIDEO THUMBNAIL */
+
+.project-video {
+  position: relative;
+  cursor: pointer;
+}
+
+.project-video img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.project-video iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 6px;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 42px;
+  background: rgba(0,0,0,0.6);
+  padding: 10px 18px;
+  border-radius: 8px;
+  color: white;
 }
 
 footer {
