@@ -25,10 +25,31 @@ header p {
   text-decoration: none;
 }
 
+.about {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 10px;
+}
+
 .projects {
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
   padding: 20px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .project {
@@ -37,6 +58,7 @@ header p {
   margin-bottom: 40px;
   border-radius: 10px;
   transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
 .project:hover {
@@ -129,4 +151,46 @@ footer {
   text-align: center;
   padding: 40px;
   color: #94a3b8;
+}
+
+.featured {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #1e293b;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.featured-title {
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.featured h2 {
+  font-size: 32px;
+  margin-top: 20px;
+}
+
+.role {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.tags {
+  margin-top: 10px;
+}
+
+.tags span {
+  display: inline-block;
+  background: #334155;
+  padding: 4px 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  font-size: 12px;
 }
