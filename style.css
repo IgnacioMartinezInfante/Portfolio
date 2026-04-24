@@ -5,6 +5,8 @@ body {
 
   background: radial-gradient(circle at top, #1e293b, #0f172a);
   background-attachment: fixed;
+
+  padding-top: 80px;
 }
 
 /* GLOW LATERAL */
@@ -437,4 +439,81 @@ section {
 section.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  padding: 16px 32px; /* antes 12px 24px */
+  gap: 50px;
+
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+
+  z-index: 1000;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* LOGO */
+.logo {
+  font-weight: bold;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* LINKS */
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 16px; /* antes 14px */
+  position: relative;
+  transition: 0.3s;
+}
+
+/* HOVER */
+.navbar a:hover {
+  color: #ffffff;
+}
+
+/* EFECTO UNDERLINE PRO */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #60a5fa, #ec4899);
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.navbar a.active {
+  color: #ffffff;
+}
+
+.navbar a.active::after {
+  width: 100%;
 }

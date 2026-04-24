@@ -131,3 +131,17 @@ const observer = new IntersectionObserver(entries => {
 elements.forEach(el => observer.observe(el));
 
 });
+
+let currentPage = window.location.pathname.split("/").pop();
+
+if (currentPage === "") {
+  currentPage = "index.html";
+}
+
+document.querySelectorAll(".navbar a").forEach(link => {
+  const linkPage = link.getAttribute("href");
+
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  }
+});
