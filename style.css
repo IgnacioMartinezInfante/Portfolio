@@ -517,3 +517,30 @@ section.show {
 .navbar a.active::after {
   width: 100%;
 }
+
+.hero-logo {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 900px; /* ajustalo a gusto */
+  opacity: 1; /* súper importante para que no moleste */
+
+  pointer-events: none; /* 🔥 clave: no se puede interactuar */
+  user-select: none;
+
+  z-index: 0;
+}
+
+.project-info {
+  max-width: 600px;
+  margin: 120px auto 0 auto; /* centra + espacio arriba */
+  padding: 25px 30px;
+
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+
+  backdrop-filter: blur(10px);
+}
