@@ -292,6 +292,16 @@ footer {
   gap: 20px;
 }
 
+.project-gallery video {
+  width: 100%;
+  max-width: 1000px;
+
+  border-radius: 12px;
+  margin: 10px auto;
+
+  object-fit: cover;
+}
+
 .project-gallery img {
   width: 100%;
   border-radius: 12px;
