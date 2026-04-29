@@ -568,3 +568,22 @@ section.show {
 
   backdrop-filter: blur(10px);
 }
+
+.icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+
+  margin-right: 8px;
+  vertical-align: middle;
+
+  filter: brightness(0) invert(1); /* 🔥 los hace blancos */
+  
+  transition: transform 1s ease, opacity 1s ease;
+  filter: brightness(0) invert(1);
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
