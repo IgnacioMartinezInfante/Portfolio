@@ -300,6 +300,9 @@ footer {
   margin: 10px auto;
 
   object-fit: cover;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .project-gallery img {
@@ -311,6 +314,11 @@ footer {
 }
 
 .project-gallery img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.project-gallery video:hover {
   transform: scale(1.02);
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
@@ -397,7 +405,7 @@ footer {
 
 /* base */
 .lightbox-content {
-  display: block;
+  display: none;
   margin: auto;
   max-width: 90%;
   max-height: 80%;
@@ -406,6 +414,12 @@ footer {
   opacity: 1;
   transform: translateX(0);
   transition: all 0.35s ease;
+}
+
+#lightbox-img,
+#lightbox-video {
+  max-width: 90%;
+  max-height: 80%;
 }
 
 /* salida hacia izquierda */
