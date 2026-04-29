@@ -542,6 +542,26 @@ section.show {
   width: 100%;
 }
 
+/* SEPARADORES VERTICALES */
+.nav-right a {
+  position: relative;
+  padding: 0 8px;
+}
+
+/* línea separadora */
+.nav-right a:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  left: calc(-10px - 0.5px);
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 1px;
+  height: 16px;
+
+  background-color: rgba(255, 255, 255, 0.25); /* sutil */
+}
+
 .hero-logo {
   position: absolute;
   top: 30%;
