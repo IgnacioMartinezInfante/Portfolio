@@ -52,16 +52,27 @@ body::after {
 
 header {
   text-align: center;
-  padding: 80px 20px;
+  padding-top: clamp(100px, 15vh, 160px);
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 header h1 {
-  font-size: 42px;
+  font-size: clamp(28px, 4vw, 48px);
   margin-bottom: 10px;
 }
 
 header p {
-  color: #94a3b8;
+  font-size: clamp(14px, 1.5vw, 18px);
+  color: #9ca3af;
+  margin-bottom: 15px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .links a {
@@ -79,6 +90,105 @@ header p {
 
 .about h2 {
   margin-bottom: 10px;
+}
+
+/* SECCIÓN PRINCIPAL */
+
+.profile {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONTENEDOR */
+
+.profile-container {
+  display: flex;
+  gap: clamp(30px, 5vw, 80px);
+  margin-top: 2px;
+  max-width: 1100px;
+  width: 100%;
+  align-items: center;
+}
+
+/* IZQUIERDA */
+
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+}
+
+.profile-left img {
+  margin-top: -50px;
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+
+  border: 3px solid rgba(255,255,255,0.2);
+  margin-bottom: 20px;
+}
+
+/* CONTACTO */
+
+.contacto span {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #e0e0e0;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.contacto p,
+.contacto a {
+  margin: 0;
+}
+
+.contacto p, a {
+  text-decoration: none;
+  color: #9ca3af;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.contacto a:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+/* DERECHA */
+
+.profile-right {
+  max-width: 600px;
+}
+
+.profile-right h1 {
+  font-size: clamp(28px, 4vw, 48px);
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.profile-right h3 {
+  color: #9ca3af;
+  margin-bottom: 40px;
+}
+
+.profile-right p {
+  font-size: clamp(18px, 1.6vw, 20px);
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 650px;
+  color: #d1d5db; /* un poquito más claro */
+  margin-bottom: 15px;
 }
 
 .projects {
@@ -135,6 +245,48 @@ header p {
 .buttons a:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(56,189,248,0.4);
+}
+
+/* ABOUT */
+
+.about {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+
+  max-width: 900px;
+  width: 100%;
+}
+
+/* FOTO */
+.about-img img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 3px solid rgba(255,255,255,0.2);
+}
+
+/* TECTO */
+.about-text {
+  flex: 1;
+  text-align: left; /* 🔥 clave */
+}
+
+.about-text h2 {
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  color: #9ca3af;
+  line-height: 1.6;
 }
 
 /* VIDEO */
