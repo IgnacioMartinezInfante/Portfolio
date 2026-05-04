@@ -120,13 +120,12 @@ header p {
   width: 280px;
 }
 
-.profile-left img {
+.foto-perfil {
   margin-top: -50px;
   width: 280px;
   height: 280px;
   object-fit: cover;
   border-radius: 50%;
-
   border: 3px solid rgba(255,255,255,0.2);
   margin-bottom: 20px;
 }
@@ -151,9 +150,13 @@ header p {
 .contacto p,
 .contacto a {
   margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.contacto p, a {
+.contacto p,
+.contacto a {
   text-decoration: none;
   color: #9ca3af;
   font-size: 15px;
@@ -163,6 +166,13 @@ header p {
 .contacto a:hover {
   color: white;
   transform: translateX(5px);
+}
+
+.icono {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  filter: brightness(0) invert(1);
 }
 
 /* DERECHA */
