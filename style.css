@@ -224,11 +224,12 @@ header p {
   border-radius: 10px;
   transition: transform 0.2s, box-shadow 0.2s;
   border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
 }
 
 .project:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
 .project h2 {
@@ -384,6 +385,11 @@ footer {
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 30px;
+}
+
+.featured:hover {
+  transform: translateY(-14px);
+  box-shadow: 20px 60px 100px rgba(0,0,0,0.4);
 }
 
 .featured h2 {
