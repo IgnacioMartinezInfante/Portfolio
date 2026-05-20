@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // =======================
   document.querySelectorAll(".project-video").forEach(container => {
 
-    container.addEventListener("click", () => {
+    container.addEventListener("click", (e) => {
+
+      e.stopPropagation(); //  NUEVO: evita que el click vaya al contenedor padre
 
       const videoId = container.dataset.video;
 
@@ -21,6 +23,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   });
+
+  // =======================
+  //  CLICK EN MON (FEATURED)
+  // =======================
+  const featured = document.querySelector(".featured");
+
+  if (featured) {
+    featured.addEventListener("click", () => {
+      window.location.href = "mon.html";
+    });
+  }
 
   // =======================
   // LIGHTBOX (SOLO SI EXISTE)
@@ -43,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let mediaList = [];
     let currentIndex = 0;
 
-    // construir lista
     mediaElements.forEach((el, index) => {
 
       if (el.tagName === "IMG") {
@@ -85,7 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ? lightboxImg
         : lightboxVideo;
 
-      // animación salida
       currentElement.classList.remove("slide-in-left", "slide-in-right");
       currentElement.classList.add(
         direction === "right" ? "slide-out-left" : "slide-out-right"
@@ -93,7 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       setTimeout(() => {
 
-        // reset
         lightboxImg.style.display = "none";
         lightboxVideo.style.display = "none";
         lightboxVideo.pause();
@@ -127,7 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 200);
     }
 
-    // cerrar
     if (closeBtn) {
       closeBtn.onclick = () => {
         lightbox.style.display = "none";
@@ -136,7 +145,6 @@ document.addEventListener("DOMContentLoaded", () => {
       };
     }
 
-    // click afuera
     lightbox.onclick = (e) => {
       if (e.target === lightbox) {
         lightbox.style.display = "none";
@@ -145,7 +153,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
 
-    // teclado
     document.addEventListener("keydown", (e) => {
       if (lightbox.style.display === "block") {
 
@@ -160,7 +167,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // botones
     if (prevBtn) {
       prevBtn.onclick = (e) => {
         e.stopPropagation();

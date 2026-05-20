@@ -377,6 +377,7 @@ footer {
   box-shadow: 0 15px 40px rgba(0,0,0,0.5);
   text-align: center;
   border: 1px solid rgba(255,255,255,0.05);
+  cursor: pointer;
 }
 
 .featured-title {
@@ -744,6 +745,10 @@ section.show {
 .hero-logo {
   width: min(900px, 80vw);
   margin-bottom: 50px;
+}
+
+.zapp-logo {
+  width: 550px; /* ajustá a gusto */
 }
 
 .project-info {
